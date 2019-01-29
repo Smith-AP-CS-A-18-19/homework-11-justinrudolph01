@@ -6,14 +6,16 @@ public class Homework11 {
 	 * variables. The constructor should create and save an
 	 * ArrayList of int values
 	 */
-	public Homework11() {
+	 private ArrayList<Integer> list;
 
+	public Homework11() {
+		list = new ArrayList<Integer>();
 	}
 
 	/* Return the stored ArrayList
 	 */
 	public ArrayList<Integer> getList() {
-
+		return list;
 	}
 
 	/* Fill the stored array list with integers, starting
@@ -21,7 +23,9 @@ public class Homework11 {
 	 * the resultant ArrayList should be n - m.
 	 */
 	public void problem1(int n, int m) {
-
+		for (int i = n; i < m; i++){
+			list.add(i);
+		}
 	}
 
 	/* Remove from the stored array list all numbers that
@@ -30,7 +34,11 @@ public class Homework11 {
 	 * the right shift their indices down one.
 	 */
 	public void problem2(int n) {
-
+		for (int i = 0; i < list.size(); i++){
+			if (list.get(i) % n == 0){
+				list.remove(i);
+			}
+		}
 	}
 
 	/* Problem 3:
