@@ -11,8 +11,8 @@ private ArrayList<Integer> list2;
   public int problem4(){
     int sum = 0;
     list2 = getList();
-    for (int i : list2){
-      sum += i;
+    for (int i = 0; i < list2.size(); i++){
+      sum += list2.get(i);
     }
     return sum;
   }
